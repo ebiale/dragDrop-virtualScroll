@@ -1,0 +1,10 @@
+<h1>Countries</h1>
+<hr>
+
+<ul class="list-group" cdkDropList (cdkDropListDropped)="drop($event)">
+    <cdk-virtual-scroll-viewport itemSize="50" class="list-container list-group">
+        <li class="list-group-item" *ngFor="let country of countries" cdkDrag>
+            {{country.name}}
+        </li>
+    </cdk-virtual-scroll-viewport>
+</ul>
